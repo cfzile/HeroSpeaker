@@ -1,0 +1,33 @@
+{% extends 'index.html' %}
+{% load static %}
+{% load general %}
+
+{% block header %}
+    <script src="{% static 'js/script.js' %}"></script>
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+{% endblock %}
+
+{% block content %}
+    <div class="loading" style="display: none">
+        Loading...
+    </div>
+    <div class="container">
+
+        <form id="upload-container" method="post" enctype="multipart/form-data" action="{% url 'load_data' %}">
+            {% csrf_token %}
+            <div class="load_audio">
+                <img id="upload-audio" src="{% static 'img/upload.svg' %}">
+                <input id="file-input" type="file" name="file" multiple>
+                <label for="file-input" id="text_choose_file">Выберите файл</label>
+                <label for="file-input" id="text_file_loaded" style="display:none">Файл успешно загружен</label>
+                {#                <span>или перетащите его сюда</span>#}
+            </div>
+            {#            <h1>Insert text to be spoken</h1>#}
+            <textarea name="text" rows="15">Вставте текст для озвучки сюда</textarea>
+        </form>
+        <div class="switcher">
+            <div class="item active" id="send">Обработать</div>
+            {#            <div class="item">Model 2</div>#}
+        </div>
+    </div>
+{% endblock %}
