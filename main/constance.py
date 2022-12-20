@@ -1,1 +1,1 @@
-HOME_PAGE_NAME = 'Detector'
+HOME_PAGE_NAME = 'HeroSpeaker'
