@@ -36,10 +36,21 @@ menu li {
 .logo {
     display: flex;
     float: left;
-    width: 10%;
-    margin-left: 5%;
+    width: 100%;
+    /*margin-left: 5%;*/
     color: white;
     font-size: 2em;
+    flex-wrap: nowrap;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+}
+
+.logo a {
+    color: white;
+    text-transform: none;
+    text-underline: none;
+    text-decoration: none;
 }
 
 menu li {
@@ -74,11 +85,13 @@ menu li {
     align-content: space-around;
     flex-direction: row;
     height: 5vh;
+    font-size: 1.2em;
+    text-transform: uppercase;
 }
 
 .switcher .item:first-child {
     /*border-bottom: 2px solid white;*/
-    background: #151718;
+    background: #110F11;
     color: white;
     /*color: #151718;*/
     /*font-weight: bold;*/
@@ -88,19 +101,37 @@ menu li {
     /*border-left: 1px solid black;*/
 }
 
-#result{
+#result {
     /*display: none;*/
     height: 70vh;
     border: 10px solid white;
     border-radius: 2px;
 }
 
-.loading{
+.loading {
     color: #151718;
     font-size: 2em;
 }
 
-menu li a{
+menu li a {
     text-decoration: none;
     color: #fafafa;
+}
+
+
+.result {
+    display: flex;
+    width: 50vw;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.result p {
+    border: #9a9a9a solid 1px;
+    background: #F2F2F2;
+    padding: 1% 2%;
+    border-radius: 5px;
 }
